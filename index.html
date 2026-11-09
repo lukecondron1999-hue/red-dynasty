@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070707">
+  <title>RED DYNASTY — Manchester United Fan Experience</title>
+  <meta name="description" content="A premium unofficial Manchester United fan experience with fixtures, results, matchday energy and club history.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="progress"><span id="progressBar"></span></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Red Dynasty home">
+      <span class="brand-mark">MU</span>
+      <span>RED <b>DYNASTY</b></span>
+    </a>
+    <nav>
+      <a href="#scores">Scores</a>
+      <a href="#fixtures">Fixtures</a>
+      <a href="#table">Table</a>
+      <a href="#news">News</a>
+      <a href="#legacy">Legacy</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-copy reveal-left">
+        <p class="eyebrow">THEATRE OF DREAMS • 2026/27</p>
+        <h1>UNITED<br><span>NEVER</span><br>STOPS.</h1>
+        <p class="hero-text">A premium fan-made experience for the people who live for the badge, the noise and the next ninety minutes.</p>
+        <div class="hero-actions">
+          <a class="btn btn-red" href="#scores">ENTER MATCHDAY <span>↗</span></a>
+          <a class="btn btn-ghost" href="#fixtures">VIEW FIXTURES</a>
+        </div>
+      </div>
+
+      <div class="hero-art reveal-right" aria-hidden="true">
+        <div class="stadium">
+          <div class="stadium-ring"></div>
+          <div class="stadium-light l1"></div><div class="stadium-light l2"></div>
+          <div class="stadium-light l3"></div><div class="stadium-light l4"></div>
+          <div class="pitch">
+            <div class="halfway"></div><div class="circle"></div>
+            <div class="goal left"></div><div class="goal right"></div>
+          </div>
+        </div>
+        <div class="floating-badge">MU</div>
+      </div>
+
+      <div class="hero-scroll">SCROLL <span>↓</span></div>
+    </section>
+
+    <section class="ticker" aria-label="Fan ticker">
+      <div class="ticker-track">
+        <span>UNITED • UNITED • UNITED •</span>
+        <span>OLD TRAFFORD • THEATRE OF DREAMS •</span>
+        <span>RED DEVILS • RED DEVILS •</span>
+        <span>UNITED • UNITED • UNITED •</span>
+        <span>OLD TRAFFORD • THEATRE OF DREAMS •</span>
+      </div>
+    </section>
+
+    <section id="scores" class="section">
+      <div class="section-head reveal-left">
+        <div><p class="eyebrow">MATCHDAY</p><h2>LATEST <em>RESULT</em></h2></div>
+        <span class="live-pill"><i></i> UPDATED 9 NOV 2026</span>
+      </div>
+      <article class="score-card reveal-right">
+        <div class="competition">PREMIER LEAGUE <span>FULL TIME</span></div>
+        <div class="score-row">
+          <div class="team home-team"><div class="mini-badge">MU</div><strong>MAN UTD</strong><small>OLD TRAFFORD</small></div>
+          <div class="score">4 <span>—</span> 4</div>
+          <div class="team"><div class="mini-badge villa">AV</div><strong>ASTON VILLA</strong><small>AWAY</small></div>
+        </div>
+        <div class="match-note">SUN • 8 NOVEMBER 2026 <b>•</b> Old Trafford</div>
+        <div class="goal-strip"><span>Dorgu</span><span>United goals</span><span>4–4</span><span>Full time</span></div>
+      </article>
+    </section>
+
+    <section id="fixtures" class="section dark-section">
+      <div class="section-head reveal-right">
+        <div><p class="eyebrow">WHAT'S NEXT</p><h2>UPCOMING <em>FIXTURES</em></h2></div>
+        <button class="filter" id="filterBtn">ALL COMPETITIONS ▾</button>
+      </div>
+      <div class="fixtures-grid" id="fixturesGrid"></div>
+    </section>
+
+    <section id="table" class="section">
+      <div class="section-head reveal-left">
+        <div><p class="eyebrow">2026/27</p><h2>LEAGUE <em>TABLE</em></h2></div>
+        <span class="muted">FAN VIEW • DATA SNAPSHOT</span>
+      </div>
+      <div class="table-wrap reveal-right">
+        <table>
+          <thead><tr><th>#</th><th>TEAM</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>PTS</th></tr></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="news" class="section news-section">
+      <div class="section-head reveal-left">
+        <div><p class="eyebrow">THE RED FEED</p><h2>LATEST <em>ENERGY</em></h2></div>
+      </div>
+      <div class="news-grid">
+        <article class="news-card reveal-left"><div class="news-img news-one">MATCHDAY</div><div class="news-body"><span>OPINION</span><h3>Eight goals. One stadium. Zero quiet moments.</h3><p>Relive the drama of United's latest league thriller.</p></div></article>
+        <article class="news-card reveal-up"><div class="news-img news-two">OLD TRAFFORD</div><div class="news-body"><span>FEATURE</span><h3>The Theatre of Dreams is ready for another chapter.</h3><p>A visual fan journey through the home of the Reds.</p></div></article>
+        <article class="news-card reveal-right"><div class="news-img news-three">EUROPE</div><div class="news-body"><span>CHAMPIONS LEAGUE</span><h3>Next stop: Lisbon. European nights are back.</h3><p>United travel to Sporting in the next European fixture.</p></div></article>
+      </div>
+    </section>
+
+    <section id="legacy" class="legacy">
+      <div class="legacy-inner">
+        <p class="eyebrow reveal-left">THE LEGACY</p>
+        <h2 class="reveal-right">BUILT ON<br><span>PASSION.</span></h2>
+        <p class="legacy-copy reveal-left">From Busby to Ferguson, from the Stretford End to every corner of the world — United is more than a football club. This fan page celebrates the noise, memories and next generation of Reds.</p>
+        <div class="stats reveal-up">
+          <div><strong>1878</strong><span>FOUNDED</span></div>
+          <div><strong>OLD</strong><span>TRAFFORD</span></div>
+          <div><strong>RED</strong><span>FOREVER</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-orb"></div>
+      <p class="eyebrow">THIS IS OUR HOME</p>
+      <h2>GLORY. GLORY.<br><span>MAN UNITED.</span></h2>
+      <a class="btn btn-red" href="#home">BACK TO TOP ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>RED DYNASTY</b><span>Unofficial fan-made website</span></div>
+    <div>Not affiliated with Manchester United FC.</div>
+    <div>© <span id="year"></span> Red Dynasty</div>
+  </footer>
+
+  <div class="toast" id="toast">RED DYNASTY LOADED ✓</div>
+  <script src="script.js"></script>
+</body>
+</html>
